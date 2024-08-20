@@ -1,0 +1,607 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root{
+    --cor-principal: #F5C2C2;
+    --cor-secundaria: #EC6868;
+    --fonte-principal: "Josefin Slab", serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--cor-principal);
+    font-family: var(--fonte-principal);
+}
+
+/* header */
+
+header{
+    background-color: var(--cor-secundaria);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.274);
+}
+
+#container_cabecalho{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0 15px 0;
+}   
+
+.img_coracao{
+    width: 100px;
+}
+
+#titulo_principal{
+    color: white;
+    font-weight: bold;
+}
+
+/* main */
+
+#box_main{
+    background-color: white;
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 0.8%;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.26);
+    border-radius: 1px;
+}
+
+#container_main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px 0 20px;
+}
+
+.texto_main{
+    font-size: 2rem;
+    text-align: justify;
+}
+
+.img_alincas{
+    width: 25vw;
+    margin: 50px 0;
+    border: solid 3px var(--cor-principal);
+}
+
+.texto_meses{
+    font-size: 3rem;
+    margin-top: 5%;
+    color: var(--cor-secundaria);
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+
+/* playlist */
+
+#titulo_playlist{
+    font-size: 3rem;
+    margin-top: 5%;
+    margin-left: 22%;
+    color: var(--cor-secundaria);
+}
+
+#container_playlist{
+    text-align: center;
+}
+
+.coracao_grande{
+    width: 20vw;
+}
+
+.botao_musical{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Suaviza a transição do tamanho */
+}
+
+.botao_musical:hover{
+    transform: scale(1.2);
+}
+
+.icone_botao_musica{
+    width: 4vw;
+}
+
+.linha_icones{
+    display: flex;
+    justify-content: center;
+    gap: 25%;
+}
+
+.icone1{
+    margin-left: 5%;
+}
+
+.icone3{
+    margin-top: 2%;
+}
+
+
+.icone6{
+    margin-bottom: 1%;
+}
+
+.texto_playlist{
+    margin-top: 1%;
+    margin-left: 22%;
+    font-size: 2rem;
+}
+
+#link_playlist {
+    font-weight: bold;
+    position: relative;
+    color: var(--cor-secundaria);
+    text-decoration: none; /* Remove qualquer sublinhado padrão */
+}
+
+#link_playlist::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px; /* Altura da linha */
+    display: block;
+    margin-top: 3px; /* Espaço entre o texto e a linha */
+    right: 0;
+    background: var(--cor-secundaria); /* Cor da linha */
+    transition: width 0.3s ease; /* Suaviza a transição da largura */
+}
+
+#link_playlist:hover::after {
+    width: 100%; /* A linha cresce até a largura total do link */
+    left: 0;
+    background: var(--cor-secundaria); /* Cor da linha ao passar o cursor */
+}
+
+/* nossas fotos */
+
+#container_botao{
+    display: flex;
+    justify-content: center;
+}
+
+#botao_coracao{
+    margin-top: 4%;
+    background-color: var(--cor-secundaria);
+    padding: 1rem 10rem;
+    margin-bottom: 5%;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Suaviza a transição do tamanho */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.26);
+}
+
+#botao_coracao:hover{
+    transform: scale(1.1); /* Aumenta o tamanho do botão */
+}
+
+.icon_coracao{
+    width: 3vw;
+}
+
+.conjunto_fotos{
+    display: flex;
+    justify-content: center;
+    gap: 20%;
+    
+}
+
+.conjuto_abaixo{
+    margin-top: 4%;
+}
+
+.fotos{
+    background-color: white;
+    max-width: 20vw;
+    padding: 15px 15px 30px 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.24);
+}
+
+.foto05{
+    margin-bottom: 5%;
+}
+
+.img_foto{
+    width: 15vw;
+}
+
+.data_fotos{
+    text-align: center;
+    padding-top: 2%;
+}
+
+@media (max-width: 1670px){
+    #titulo_playlist{
+        margin-left: 19%;
+    }
+    
+    .texto_playlist{
+        margin-left: 19%;
+    }
+}
+
+@media (max-width: 1480px){
+    #titulo_playlist{
+        margin-left: 14%;
+    }
+    
+    .texto_playlist{
+        margin-left: 14%;
+    }
+}
+
+@media (max-width: 1340px){
+    #titulo_playlist{
+        margin-left: 11%;
+        margin-bottom: 2%;
+    }
+    
+    .texto_playlist{
+        margin-left: 11%;
+    }
+}
+
+@media (max-width: 1180px){
+    #titulo_playlist{
+        margin-left: 6%;
+        margin-bottom: 2.5%;
+    }
+    
+    .texto_playlist{
+        margin-left: 6%;
+    }
+}
+
+@media (max-width: 1080px){
+    #titulo_playlist{
+        margin-left: 2%;
+        margin-bottom: 2.5%;
+    }
+    
+    .texto_playlist{
+        margin-left: 2%;
+    }
+
+    .icone_botao_musica{
+        width: 5vw;
+    }
+
+    .coracao_grande{
+        width: 25vw;
+    }
+}
+
+@media (max-width: 950px){
+    #titulo_playlist{
+        margin-left: 4%;
+        margin-bottom: 2.5%;
+    }
+    
+    .texto_playlist{
+        margin-left: 4%;
+        font-size: 1.9rem;
+    }
+
+    .icone_botao_musica{
+        width: 5vw;
+    }
+
+    .coracao_grande{
+        width: 25vw;
+    }
+
+    .icon_coracao{
+        width: 5vw;
+    }
+    
+    .img_foto{
+        width: 20vw;
+    }
+}
+
+@media (max-width: 830px){
+    .img_alincas{
+        width: 30vw;
+    }
+}
+
+@media (max-width: 750px){
+
+    .icone_botao_musica{
+        width: 7vw;
+    }
+
+    .coracao_grande{
+        width: 30vw;
+    }
+
+    .icon_coracao{
+        width: 5vw;
+    }
+
+    .conjunto_fotos{
+        gap: 25%;
+        
+    }
+
+    .fotos{
+        max-width: 22vw;
+    }
+    
+    .img_foto{
+        width: 22vw;
+    }
+}
+
+@media (max-width: 660px){
+    .texto_main{
+        font-size: 1.8rem;
+    }
+    
+    .img_alincas{
+        width: 40vw;
+        margin: 50px 0;
+    }
+
+    .texto_meses{
+        font-size: 2.5rem;
+        margin-top: 5%;
+        margin-bottom: 2%;
+    }
+
+    .icone_botao_musica{
+        width: 8vw;
+    }
+
+    .coracao_grande{
+        width: 30vw;
+    }
+
+    .icon_coracao{
+        width: 7vw;
+    }
+
+    .conjunto_fotos{
+        gap: 15%;
+        
+    }
+
+    .fotos{
+        max-width: 30vw;
+    }
+    
+    .img_foto{
+        width: 30vw;
+    }
+}
+
+@media (max-width: 550px){
+    .texto_main{
+        font-size: 1.7rem;
+    }
+    
+    .img_alincas{
+        width: 40vw;
+        margin: 50px 0;
+    }
+
+    .texto_meses{
+        font-size: 2.5rem;
+        margin-top: 5%;
+        margin-bottom: 2%;
+    }
+
+    #titulo_playlist{
+        font-size: 2.5rem;
+    }
+    
+    .texto_playlist{
+        font-size: 1.6rem;
+    }
+
+    .icone_botao_musica{
+        width: 10vw;
+    }
+
+    .coracao_grande{
+        width: 40vw;
+    }
+
+    .icon_coracao{
+        width: 7vw;
+    }
+
+    .conjunto_fotos{
+        gap: 15%;
+        
+    }
+
+    .fotos{
+        max-width: 30vw;
+    }
+    
+    .img_foto{
+        width: 30vw;
+    }
+
+    .linha_icones{
+        gap: 44%;
+    }
+    
+    .icone1{
+        margin-left: 8%;
+    }
+    
+    .icone3{
+        margin-top: 5%;
+    }
+    
+    
+    .icone6{
+        margin-bottom: 1%;
+    }
+}
+
+@media (max-width: 470px){
+    .texto_main{
+        font-size: 1.5rem;
+    }
+    
+    .img_alincas{
+        width: 50vw;
+        margin: 50px 0;
+    }
+
+    .texto_meses{
+        font-size: 2.5rem;
+        margin-top: 5%;
+        margin-bottom: 2%;
+    }
+
+    #titulo_playlist{
+        margin-top: 10%;
+        margin-bottom: 10%;
+        font-size: 2.5rem;
+    }
+    
+    .texto_playlist{
+        font-size: 1.6rem;
+    }
+
+    .icone_botao_musica{
+        width: 10vw;
+    }
+
+    .coracao_grande{
+        width: 40vw;
+    }
+
+    .icon_coracao{
+        width: 7vw;
+    }
+
+    .conjunto_fotos{
+        gap: 10%; 
+    }
+
+    .fotos{
+        max-width: 33vw;
+    }
+    
+    .img_foto{
+        width: 33vw;
+    }
+
+    .linha_icones{
+        gap: 44%;
+    }
+    
+    .icone1{
+        margin-left: 8%;
+    }
+    
+    .icone3{
+        margin-top: 5%;
+    }
+    
+    
+    .icone6{
+        margin-bottom: 10%;
+    }
+
+    #botao_coracao{
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+}
+
+@media (max-width: 390px){
+    .img_coracao{
+        width: 70px;
+    }
+
+    .texto_main{
+        font-size: 1.5rem;
+    }
+    
+    .img_alincas{
+        width: 65vw;
+        margin: 50px 0;
+    }
+
+    .texto_meses{
+        font-size: 2.5rem;
+        margin-top: 10%;
+        margin-bottom: 2%;
+    }
+
+    #titulo_playlist{
+        margin-top: 10%;
+        margin-bottom: 10%;
+        font-size: 2.4rem;
+    }
+    
+    .texto_playlist{
+        font-size: 1.7rem;
+    }
+
+    .icone_botao_musica{
+        width: 15vw;
+    }
+
+    .coracao_grande{
+        width: 60vw;
+    }
+
+    .icon_coracao{
+        width: 12vw;
+    }
+
+    .conjunto_fotos{
+        flex-direction: column;
+        gap: 20%;
+        align-items: center;
+    }
+
+    .fotos{
+        max-width: 60vw;
+    }
+    
+    .img_foto{
+        width: 60vw;
+    }
+
+    .linha_icones{
+        gap: 44%;
+    }
+    
+    .icone1{
+        margin-left: 8%;
+    }
+    
+    .icone3{
+        margin-top: 5%;
+    }
+    
+    .icone6{
+        margin-bottom: 10%;
+    }
+
+    #botao_coracao{
+        margin-top: 10%;
+        margin-bottom: 10%;
+        padding: 1rem 8rem;
+    }
+
+    .foto01, .foto03{
+        margin-bottom: 5%;
+    }
+}
